@@ -12,40 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="booking.css">
     <title>Passenger Details</title>
-
-
-    <script>
-        function passvalues()
-        {
-            var fname=document.getElementById("firstName").value;
-            localStorage.setItem("textvalue0",fname); 
-            
-            var lname=document.getElementById("lastName").value;
-            localStorage.setItem("textvalue1",lname);
-           
-            var ag=document.getElementById("age").value;
-            localStorage.setItem("textvalue2",ag);
-            
-            var ema=document.getElementById("emailAddress").value;
-            localStorage.setItem("textvalue3",ema);
-
-            return false;
-        }
-    </script>
-
-
 </head>
 
+
 <body background="5.jpg">
-
-
-
     <div class="container1">
         <div class="details-container">
-
-        <form action="confirmation.html">
+            <form action="confirmation.html">
             <h2>Passenger Details</h2>
-
             <div class="mb-3">
                 <label for="firstName" class="form-label">First Name</label>
                 <input type="text" class="form-control" id="firstName" required>
@@ -74,7 +48,6 @@
                 </div>
             </div>
             <br>
-
             <div class="mb-3">
                 <label for="emailAddress" class="form-label">Email</label>
                 <input type="email" class="form-control" id="emailAddress" required>
@@ -84,22 +57,16 @@
                 <input type="text" class="form-control" id="phoneNo" required>
             </div>
             <div class="button-collection">
-
-             <!-- <div class="addPassengerBtn">
+            <!-- <div class="addPassengerBtn">
                     <button type="button" class="btn btn-primary" id="add-passenger-btn">Add Passenger</button>
                 </div>> --> 
-                <div class="submitBtn">
+            <div class="submitBtn">
                     <button type="submit" class="btn btn-primary" onclick="passvalues()" id="submit-btn" >Submit</button>
-                    
-                </div>
-
             </div>
-        </form>
+            </div>
+            </form>
+        </div>
     </div>
-    </div>
-
-
     <script src="booking.js"></script>
 </body>
-
 </html>

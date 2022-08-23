@@ -1,183 +1,106 @@
-*{
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto Condensed', sans-serif;
-}
-
 /* navbar */
-
-
 .navbar-nav{
 	margin-right: 0 !important;
 	padding-right: 100px;
 }
-
-
 .navbar{
 	background-color: #040e25;
 	color: white !important;
 }
-
-
-
 .nav-item a{
 	color: white !important;
 }
-
-/*
-.nav-item{
-	padding-left: 2px;
-}
-*/
-
-
 .navbar-brand{
 	color: white !important;
 	padding-left: 100px;
 }
-
-
-
-
-#navbar button{
-	color: white !important;
-}
-
-
-
 .logo1{
 	transform: translateX(80px);
-	
 }
 
-
 /* banner */
-
 #banner-container{
-	/* background-color: #468b71; */
 	color: rgb(0, 0, 0) !important;
 	background-image: url(4.jpg);
 	background-size: cover;
 	padding-top: 80px;
 	padding-bottom: 80px;
 	font-size: 20px;
-	
 }
-
-
 #banner-row h3, p{
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-top: 20px;
 	text-align: center;
-	
 }
-
-
-
 #banner-col{
-	/*padding-left: 630px;*/
-
 	text-align: center;
-	
-	
 }
-
-
 .myImage {
-	
 	height: 30px;
 	width: 30px;
-	
-  }
- 
+}
 .myImage1 {
 	margin-left: 620px;
 	height: 30px;
 	width: 30px;
-	
-  }
-
-
-  .myImage2 {
+}
+.myImage2 {
 	margin-left: 690px;
 	height: 30px;
 	width: 30px;
-	
-  }
+}
 
 /* overview */
 #overview{
 	padding-top: 80px;
 	padding-bottom: 80px;
-	
 	padding-right: 10ch;
 	padding-left: 10ch;
 }
-
 #overview h1{
 	padding-bottom: 70px;
-	
 }
 
 /* vision */
-
 #vision{
 	padding-top: 80px;
 	padding-bottom: 80px;
 	padding-right: 10ch;
 	padding-left: 10ch;
-	
 }
-
 #vision h1{
 	padding-bottom: 70px;
 }
 
-
-	
-
-
 /* values */
-
 #values{
 	padding-top: 80px;
 	padding-bottom: 80px;
 	padding-right: 10ch;
 	padding-left: 10ch;
-	
 }
-
 #values h1{
 	padding-bottom: 70px;
 }
 
-
-
 /* list */
-
 #list{
 	padding-top: 80px;
 	padding-bottom: 80px;
-	
 }
-
 #list h1{
 	padding-bottom: 70px;
 }
 
-
-
+/*card*/
 .card{
 	background-color: #cde4f1;
 	padding-top: 30px;
 	width: 250px;
-	
 	padding-bottom: 30px;
 	text-align: left;
 }
-
-
 .card-body{
 	text-align: center;
 }
@@ -191,7 +114,6 @@
 	margin-top: 9px;
 }
 
-
 /* media */
 @media only screen and (max-width: 987px){
 	.navbar-brand{
@@ -203,9 +125,7 @@
 	#banner-row img{
 		padding-top: 20px;
 	}
-
-.social-col{
-	width: 33%;
-}
-
+	.social-col{
+		width: 33%;
+	}
 }

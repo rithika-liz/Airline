@@ -6,3 +6,10 @@ font-style: normal;
     padding-right: 30%;
     margin-top: 20px;
 }
+.add{
+    
+    display: none;
+}
+.form1{
+    margin-bottom: 100px;
+}

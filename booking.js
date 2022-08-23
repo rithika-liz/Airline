@@ -4,19 +4,32 @@ var age = document.getElementById("age");
 var email = document.getElementById("emailAddress");
 var phoneno = document.getElementById("phoneNo");
 var submitBtn = document.getElementById("submit-btn");
+var submitBtn2 = document.getElementById("submit-btn2");
+
+var addPassengerBtn=document.getElementById("add-passenger-btn");
+var firstName2 = document.getElementById("firstName2");
+var lastName2 = document.getElementById("lastName2");
+var age2 = document.getElementById("age2");
 
 var name_regex = /^[a-zA-Z]{0,20}$/;
 var age_regex = /^0?1[89]|0?[2-9][0-9]$/;
 var email_regex = /\S+@\S+\.\S+/;
 var phone_regex = /^[0-9]{10}$/;
 
+
+
 submitBtn.disabled = "true";
+submitBtn2.disabled = "true";
+addPassengerBtn.disabled="true";
 let inputValidator = {
     "firstn": false,
     "lastn": false,
     "ageperson": false,
     "emailid": false,
-    "phonenumber": false
+    "phonenumber": false,
+    "firstn2": false,
+    "lastn2": false,
+    "ageperson2": false
 };
 
 firstName.addEventListener('input', validateFirstName)
@@ -24,6 +37,10 @@ lastName.addEventListener('input', validateLastName)
 age.addEventListener('input', validateAge)
 email.addEventListener('input', validateEmail)
 phoneno.addEventListener('input', validatePhoneNo)
+firstName2.addEventListener('input', validateFirstName2)
+lastName2.addEventListener('input', validateLastName2)
+age2.addEventListener('input', validateAge2)
+
 
 function passvalues()
         {
@@ -38,18 +55,51 @@ function passvalues()
             
             var ema=document.getElementById("emailAddress").value;
             localStorage.setItem("textvalue3",ema);
+            var np=1;
+            localStorage.setItem("np",np);
+            
+      }
 
-            return false;
+        function passvalues2()
+        {
+            var fname2=document.getElementById("firstName2").value;
+            localStorage.setItem("textvalue4",fname2); 
+            
+            var lname2=document.getElementById("lastName2").value;
+            localStorage.setItem("textvalue5",lname2);
+           
+            var ag2=document.getElementById("age2").value;
+            localStorage.setItem("textvalue6",ag2);
+            
+            var np=2;
+            localStorage.setItem("np",np);
+
         }
+
 
 function buttonRelease(){
     var result = inputValidator.firstn === true && inputValidator.lastn === true && inputValidator.ageperson === true && inputValidator.emailid === true && inputValidator.phonenumber === true;
     if(result){
         submitBtn.removeAttribute("disabled");
+        addPassengerBtn.removeAttribute("disabled");
         console.log("Submit button active");
     }
     else{
         submitBtn.disabled = "true";
+        addPassengerBtn.disabled="true";
+        console.log("Submit button not active");
+    }
+}
+function buttonRelease2(){
+    var result = inputValidator.firstn2 === true && inputValidator.lastn2 === true && inputValidator.ageperson2 === true ;
+    if(result){
+        submitBtn2.removeAttribute("disabled");
+        
+        console.log("Submit button active");
+    }
+    else{
+        submitBtn2.disabled = "true";
+        
         console.log("Submit button not active");
     }
 }
@@ -85,6 +135,40 @@ function validateAge() {
         invalid(age);
         inputValidator.ageperson = false;
         buttonRelease();
+    }
+}
+function validateFirstName2() {
+    if (name_regex.test(firstName2.value)) {
+        valid(firstName2);
+        inputValidator.firstn2 = true;
+        buttonRelease2();
+    }
+    else {
+        invalid(firstName2);
+        inputValidator.firstn2 = false;
+    }
+}
+function validateLastName2() {
+    if (name_regex.test(lastName2.value)) {
+        valid(lastName2);
+        inputValidator.lastn2 = true;
+        buttonRelease2();
+    }
+    else {
+        invalid(lastName2);
+        inputValidator.lastn2 = false;
+    }
+}
+function validateAge2() {
+    if (age_regex.test(age2.value)) {
+        valid(age2);
+        inputValidator.ageperson2 = true;
+        buttonRelease2();  
+    }
+    else {
+        invalid(age2);
+        inputValidator.ageperson2 = false;
+        buttonRelease2();
     }
 }
 function validateEmail() {

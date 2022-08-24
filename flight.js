@@ -1,10 +1,11 @@
 function display_cards(flight_det){
-    const number_of_flights = Object.keys(flight_det).length; 
+    const number_of_flights = Object.keys(flight_det).length; //get number of flights
     let content = '';
     for(let count=0;count<number_of_flights;count++){
         let flight = flight_det[count];
         const departure = new Date(flight.departTime)
         const arrival = new Date(flight.ArrivalTime)
+        //display flight details 
         content +=  `
         <div class="card" >
             <div class="card-body">
@@ -32,6 +33,7 @@ fetch('flights.json')
 .then(response => response.json())
 .then(data => display_cards(data));
 
+//setting item in local storage
 function get_flight_details(flightid){
     localStorage.setItem("flightid",flightid);
 }

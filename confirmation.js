@@ -1,3 +1,4 @@
+//get items from local storage
 let flight_id=localStorage.getItem("flightid");
 let val=localStorage.getItem("textvalue0");
 let val1=localStorage.getItem("textvalue1");
@@ -14,7 +15,7 @@ flight_id-=1;
 let content='';
 function display_value(data)
 {
-    if(np === "2")
+    if(np === "2") //for 2 passengers
     {
         console.log(typeof np);
         departure=new Date(data[flight_id].departTime);
@@ -41,7 +42,7 @@ function display_value(data)
         </div>`
         document.querySelector("#card-collection").innerHTML = content;
      }
-     else
+     else //for 1 passenger
      {
         departure=new Date(data[flight_id].departTime);
         arrival=new Date(data[flight_id].ArrivalTime);
@@ -64,7 +65,7 @@ function display_value(data)
             document.querySelector("#card-collection").innerHTML = content;
       }
 }
-
+//calling function to display details of selected flight
 fetch('flights.json')
 .then(response => response.json())
 .then(data => display_value(data));

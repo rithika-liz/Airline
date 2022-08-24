@@ -6,12 +6,15 @@ font-style: normal;
     padding-right: 30%;
     margin-top: 20px;
 }
+/*second passenger*/
 .add{
     display: none;
 }
+/*first passenger*/
 .form1{
     margin-bottom: 100px;
 }
+/*first name of second passenger*/
 .form-label2{
     margin-top: 40px;
 }

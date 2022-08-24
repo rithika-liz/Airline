@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Coiny');
+/*thank you message*/
 .cloud-text {
 	font-family: 'Coiny', cursive;
 	-webkit-background-clip: text;
@@ -19,6 +20,7 @@ body{
     margin-left: 240px;
     font-size: 29px;
 }
+/*fav icon*/
 .myImage {
 	float: inline-end;
 	height: 30px;
@@ -31,6 +33,7 @@ body{
     margin-left: 80px;
     margin-top: 50px;
 }
+/*styling passenger and flight details*/
 .details{
     margin-left: 150px;
     margin-top: 40px;
@@ -46,7 +49,7 @@ body{
     margin-top: -273px;
     font-size: 18px;
 }
+/*home button*/
 .home{
     margin-left: 480px;
-    
 }

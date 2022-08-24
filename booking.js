@@ -9,12 +9,12 @@ var addPassengerBtn=document.getElementById("add-passenger-btn");
 var firstName2 = document.getElementById("firstName2");
 var lastName2 = document.getElementById("lastName2");
 var age2 = document.getElementById("age2");
-
+//regular expressions for validation
 var name_regex = /^[a-zA-Z]{0,20}$/;
 var age_regex = /^0?1[89]|0?[2-9][0-9]$/;
 var email_regex = /\S+@\S+\.\S+/;
 var phone_regex = /^[0-9]{10}$/;
-
+//disabling button initially
 submitBtn.disabled = "true";
 submitBtn2.disabled = "true";
 addPassengerBtn.disabled="true";
@@ -46,7 +46,7 @@ function addPas()
     document.querySelector("#submit").style.display = "none";
     document.querySelector("#add-passenger-btn").style.display = "none";
 }
-
+//getting items for first passenger
 function passvalues()
         {
             var fname=document.getElementById("firstName").value;
@@ -71,7 +71,7 @@ function passvalues()
             var np=1;
             localStorage.setItem("np",np);
         }
-
+//getting items for first and second passenger
 function passvalues2()
         {
             var fname=document.getElementById("firstName").value;
@@ -113,7 +113,7 @@ function passvalues2()
             localStorage.setItem("np",np);
 
         }
-
+//release button if validated correctly
 function buttonRelease()
 {
     var result = inputValidator.firstn === true && inputValidator.lastn === true && inputValidator.ageperson === true && inputValidator.emailid === true && inputValidator.phonenumber === true;
@@ -140,6 +140,7 @@ function buttonRelease2()
         submitBtn2.disabled = "true";    
     }
 }
+//validating name,age,email,phone number
 function validateFirstName() {
     if (name_regex.test(firstName.value)) {
         valid(firstName);
@@ -230,6 +231,7 @@ function validatePhoneNo() {
         inputValidator.phonenumber = false;
     }
 }
+//setting color of rectangle box while validating
 function valid(element){
     element.style.borderColor = "green";
     element.style.borderWidth = "thin thick";

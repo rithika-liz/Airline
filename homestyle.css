@@ -93,7 +93,7 @@
 /* list */
 #list{
 	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-bottom: 10px;
 }
 #list h1{
 	padding-bottom: 70px;
@@ -104,7 +104,7 @@
 	background-color: #cde4f1;
 	padding-top: 30px;
 	width: 250px;
-	padding-bottom: 30px;
+	
 	text-align: left;
 }
 .card-body{

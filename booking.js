@@ -5,7 +5,6 @@ var email = document.getElementById("emailAddress");
 var phoneno = document.getElementById("phoneNo");
 var submitBtn = document.getElementById("submit-btn");
 var submitBtn2 = document.getElementById("submit-btn2");
-
 var addPassengerBtn=document.getElementById("add-passenger-btn");
 var firstName2 = document.getElementById("firstName2");
 var lastName2 = document.getElementById("lastName2");
@@ -16,11 +15,10 @@ var age_regex = /^0?1[89]|0?[2-9][0-9]$/;
 var email_regex = /\S+@\S+\.\S+/;
 var phone_regex = /^[0-9]{10}$/;
 
-
-
 submitBtn.disabled = "true";
 submitBtn2.disabled = "true";
 addPassengerBtn.disabled="true";
+
 let inputValidator = {
     "firstn": false,
     "lastn": false,
@@ -41,16 +39,14 @@ firstName2.addEventListener('input', validateFirstName2)
 lastName2.addEventListener('input', validateLastName2)
 age2.addEventListener('input', validateAge2)
 
-
-
-
-function addPas(){
-    
+function addPas()
+{ 
     document.querySelector("#add").style.display = "inline";
     document.querySelector("#add").style.marginTop = '100px';
     document.querySelector("#submit").style.display = "none";
     document.querySelector("#add-passenger-btn").style.display = "none";
 }
+
 function passvalues()
         {
             var fname=document.getElementById("firstName").value;
@@ -72,13 +68,11 @@ function passvalues()
                     localStorage.setItem("gend",radio.value); 
                 }
             }
-            
             var np=1;
             localStorage.setItem("np",np);
-            
-      }
+        }
 
-        function passvalues2()
+function passvalues2()
         {
             var fname=document.getElementById("firstName").value;
             localStorage.setItem("textvalue0",fname); 
@@ -99,8 +93,6 @@ function passvalues()
                     localStorage.setItem("gend",radio.value); 
                 }
             }
-            
-                        
             var fname2=document.getElementById("firstName2").value;
             localStorage.setItem("textvalue4",fname2); 
             
@@ -117,37 +109,35 @@ function passvalues()
                     localStorage.setItem("gend1",radio.value); 
                 }
             }
-
             var np=2;
             localStorage.setItem("np",np);
 
         }
 
-
-function buttonRelease(){
+function buttonRelease()
+{
     var result = inputValidator.firstn === true && inputValidator.lastn === true && inputValidator.ageperson === true && inputValidator.emailid === true && inputValidator.phonenumber === true;
-    if(result){
+    if(result)
+    {
         submitBtn.removeAttribute("disabled");
         addPassengerBtn.removeAttribute("disabled");
-        console.log("Submit button active");
     }
-    else{
+    else
+    {
         submitBtn.disabled = "true";
         addPassengerBtn.disabled="true";
-        console.log("Submit button not active");
     }
 }
-function buttonRelease2(){
+function buttonRelease2()
+{
     var result = inputValidator.firstn2 === true && inputValidator.lastn2 === true && inputValidator.ageperson2 === true ;
-    if(result){
-        submitBtn2.removeAttribute("disabled");
-        
-        console.log("Submit button active");
-    }
-    else{
-        submitBtn2.disabled = "true";
-        
-        console.log("Submit button not active");
+    if(result)
+    {
+        submitBtn2.removeAttribute("disabled");    
+    }   
+    else
+    {
+        submitBtn2.disabled = "true";    
     }
 }
 function validateFirstName() {

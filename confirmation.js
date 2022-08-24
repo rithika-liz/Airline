@@ -9,14 +9,11 @@ let val6=localStorage.getItem("textvalue6");
 let val7=localStorage.getItem("gend");
 let val8=localStorage.getItem("gend1");
 let np=localStorage.getItem("np");
-console.log(np);
 
 flight_id-=1;
 let content='';
 function display_value(data)
 {
-    
-    console.log(np);
     if(np === "2")
     {
         console.log(typeof np);
@@ -43,13 +40,9 @@ function display_value(data)
                 <h4>Price: <span> &#8377;${data[flight_id].price *2}</h4>
         </div>`
         document.querySelector("#card-collection").innerHTML = content;
-     
-   
-    
      }
      else
      {
-
         departure=new Date(data[flight_id].departTime);
         arrival=new Date(data[flight_id].ArrivalTime);
         content +=  `
@@ -69,16 +62,9 @@ function display_value(data)
                 <h4>Price: <span> &#8377;${data[flight_id].price}</h4>
         </div>`
             document.querySelector("#card-collection").innerHTML = content;
-    
-
-
-
-
-
-
-        
-     }
+      }
 }
+
 fetch('flights.json')
 .then(response => response.json())
 .then(data => display_value(data));

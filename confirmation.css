@@ -3,17 +3,13 @@
 	font-family: 'Coiny', cursive;
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;	
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/clouds.jpg);
-      
-     
-      background-position: 0%;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/clouds.jpg);
+    background-position: 0%;
 	margin-left: -250px;
     margin-top: -90px;
 	font-size: 30px;
-	
 	text-align: center;
 }
-
 body{
     margin-left: 200px;
     margin-top: 100px;
@@ -28,6 +24,7 @@ body{
 	height: 30px;
 	width: 30px;
     margin-left: 200px;
+    margin-top: -40px;
     font-family: Veranda;
 }
 .book{
@@ -48,4 +45,8 @@ body{
     margin-left: 500px;
     margin-top: -273px;
     font-size: 18px;
+}
+.home{
+    margin-left: 460px;
+    
 }

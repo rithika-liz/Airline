@@ -6,6 +6,8 @@ let val3=localStorage.getItem("textvalue3");
 let val4=localStorage.getItem("textvalue4");
 let val5=localStorage.getItem("textvalue5");
 let val6=localStorage.getItem("textvalue6");
+let val7=localStorage.getItem("gend");
+let val8=localStorage.getItem("gend1");
 let np=localStorage.getItem("np");
 console.log(np);
 
@@ -23,21 +25,22 @@ function display_value(data)
         content +=  `
         <div class="details" >
                 <h3> Passenger details </h3>
-                <h4> Name:${val} ${val1}</h4>
-                <h4> Age:${val2} </h4>
+                <h4> Passenger 1:${val} ${val1}</h4>
+                <h4> Age:${val2} , ${val7}</h4>
+                
                 <h4> Email:${val3}</h4>
-                <h4> Name:${val4} ${val5}</h4>
-                <h4> Age:${val6} </h4>
+                <h4> Passenger 2:${val4} ${val5}</h4>
+                <h4> Age:${val6} , ${val8} </h4>
                 
         </div>
-        <div class="details1" >
+        <div class="details2" >
                 <h3> Flight details </h3>
-                <h4> ${data[flight_id].flightNum}</h4>
+                <h4>Flight number: ${data[flight_id].flightNum}</h4>
                 <h4>Origin: <span> ${data[flight_id].origin}</span></h4>
                 <h4>Destination: <span> ${data[flight_id].destination}</span></h4>
                 <h4>Departure: <span>${departure.toUTCString()} </span></h4>
                 <h4>Arrival: <span>${arrival.toUTCString()} </span></h4>
-                <h4>Price: <span> &#8377;${data[flight_id].price}</h4>
+                <h4>Price: <span> &#8377;${data[flight_id].price *2}</h4>
         </div>`
         document.querySelector("#card-collection").innerHTML = content;
      
@@ -53,12 +56,12 @@ function display_value(data)
         <div class="details" >
                 <h3> Passenger details </h3>
                 <h4> Name:${val} ${val1}</h4>
-                <h4> Age:${val2} </h4>
+                <h4> Age:${val2} , ${val7} </h4>
                 <h4> Email:${val3}</h4>
         </div>
         <div class="details1" >
                 <h3> Flight details </h3>
-                <h4> ${data[flight_id].flightNum}</h4>
+                <h4>Flight number: ${data[flight_id].flightNum}</h4>
                 <h4>Origin: <span> ${data[flight_id].origin}</span></h4>
                 <h4>Destination: <span> ${data[flight_id].destination}</span></h4>
                 <h4>Departure: <span>${departure.toUTCString()} </span></h4>

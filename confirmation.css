@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+.cloud-text {
+	font-family: 'Coiny', cursive;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;	
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/clouds.jpg);
+      
+     
+      background-position: 0%;
+	margin-left: -250px;
+    margin-top: -90px;
+	font-size: 30px;
+	
+	text-align: center;
+}
+
 body{
     margin-left: 200px;
     margin-top: 100px;
@@ -26,5 +42,10 @@ body{
 .details1{
     margin-left: 499px;
     margin-top: -185px;
+    font-size: 18px;
+}
+.details2{
+    margin-left: 500px;
+    margin-top: -273px;
     font-size: 18px;
 }

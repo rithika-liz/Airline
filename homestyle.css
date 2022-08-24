@@ -4,8 +4,14 @@
 	padding-right: 100px;
 }
 .navbar{
+	
 	background-color: #040e25;
 	color: white !important;
+}
+#navbar{
+	position: sticky;
+	top: 0;
+	z-index: 99999999;
 }
 .nav-item a{
 	color: white !important;
@@ -46,7 +52,7 @@
 	width: 30px;
 }
 .myImage2 {
-	margin-left: 690px;
+	margin-left: 700px;
 	height: 30px;
 	width: 30px;
 }

@@ -9,7 +9,13 @@ font-style: normal;
 .add{
     
     display: none;
+   
 }
 .form1{
     margin-bottom: 100px;
 }
+
+.form-label2{
+    margin-top: 40px;
+}
+

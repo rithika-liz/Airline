@@ -42,6 +42,15 @@ lastName2.addEventListener('input', validateLastName2)
 age2.addEventListener('input', validateAge2)
 
 
+
+
+function addPas(){
+    
+    document.querySelector("#add").style.display = "inline";
+    document.querySelector("#add").style.marginTop = '100px';
+    document.querySelector("#submit").style.display = "none";
+    document.querySelector("#add-passenger-btn").style.display = "none";
+}
 function passvalues()
         {
             var fname=document.getElementById("firstName").value;
@@ -55,6 +64,15 @@ function passvalues()
             
             var ema=document.getElementById("emailAddress").value;
             localStorage.setItem("textvalue3",ema);
+
+            var radios = document.getElementsByName('gender');
+            for (var radio of radios)
+            {
+                if (radio.checked) {
+                    localStorage.setItem("gend",radio.value); 
+                }
+            }
+            
             var np=1;
             localStorage.setItem("np",np);
             
@@ -62,6 +80,27 @@ function passvalues()
 
         function passvalues2()
         {
+            var fname=document.getElementById("firstName").value;
+            localStorage.setItem("textvalue0",fname); 
+            
+            var lname=document.getElementById("lastName").value;
+            localStorage.setItem("textvalue1",lname);
+           
+            var ag=document.getElementById("age").value;
+            localStorage.setItem("textvalue2",ag);
+            
+            var ema=document.getElementById("emailAddress").value;
+            localStorage.setItem("textvalue3",ema);
+
+            var radios = document.getElementsByName('gender');
+            for (var radio of radios)
+            {
+                if (radio.checked) {
+                    localStorage.setItem("gend",radio.value); 
+                }
+            }
+            
+                        
             var fname2=document.getElementById("firstName2").value;
             localStorage.setItem("textvalue4",fname2); 
             
@@ -71,6 +110,14 @@ function passvalues()
             var ag2=document.getElementById("age2").value;
             localStorage.setItem("textvalue6",ag2);
             
+            var radios = document.getElementsByName('gender1');
+            for (var radio of radios)
+            {
+                if (radio.checked) {
+                    localStorage.setItem("gend1",radio.value); 
+                }
+            }
+
             var np=2;
             localStorage.setItem("np",np);
 

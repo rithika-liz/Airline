@@ -12,7 +12,7 @@ var age2 = document.getElementById("age2");
 //regular expressions for validation
 var name_regex = /^[a-zA-Z]{0,20}$/;
 var age_regex = /^0?1[89]|0?[2-9][0-9]$/;
-var email_regex = /\S+@\S+\.\S+/;
+var email_regex =  /\S+@\S+\.com$/;
 var phone_regex = /^[0-9]{10}$/;
 //disabling button initially
 submitBtn.disabled = "true";

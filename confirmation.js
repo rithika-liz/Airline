@@ -23,12 +23,12 @@ function display_value(data)
         content +=  `
         <div class="details" >
                 <h3> Passenger details </h3>
-                <h4> Passenger 1:${val} ${val1}</h4>
-                <h4> Age:${val2} , ${val7}</h4>
+                <h4> Passenger 1: ${val} ${val1}</h4>
+                <h4> Age: ${val2} , ${val7}</h4>
                 
-                <h4> Email:${val3}</h4>
-                <h4> Passenger 2:${val4} ${val5}</h4>
-                <h4> Age:${val6} , ${val8} </h4>
+                <h4> Email: ${val3}</h4>
+                <h4> Passenger 2: ${val4} ${val5}</h4>
+                <h4> Age: ${val6} , ${val8} </h4>
                 
         </div>
         <div class="details2" >
@@ -49,9 +49,9 @@ function display_value(data)
         content +=  `
         <div class="details" >
                 <h3> Passenger details </h3>
-                <h4> Name:${val} ${val1}</h4>
-                <h4> Age:${val2} , ${val7} </h4>
-                <h4> Email:${val3}</h4>
+                <h4> Name: ${val} ${val1}</h4>
+                <h4> Age: ${val2} , ${val7} </h4>
+                <h4> Email: ${val3}</h4>
         </div>
         <div class="details1" >
                 <h3> Flight details </h3>
